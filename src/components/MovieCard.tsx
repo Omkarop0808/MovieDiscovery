@@ -8,10 +8,11 @@ import { FavoritesButton } from "./FavoritesButton";
 
 interface MovieCardProps {
   movie: Movie;
+  index?: number;
   onClick: (movie: Movie) => void;
 }
 
-export function MovieCard({ movie, onClick }: MovieCardProps) {
+export function MovieCard({ movie, index = 0, onClick }: MovieCardProps) {
   const posterUrl = movie.poster_path
     ? `https://image.tmdb.org/t/p/w500${movie.poster_path}`
     : "/placeholder.png"; // We'll need a placeholder image or generic background
@@ -24,7 +25,7 @@ export function MovieCard({ movie, onClick }: MovieCardProps) {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, scale: 0.95 }}
-      transition={{ duration: 0.3 }}
+      transition={{ duration: 0.3, delay: index * 0.05 }}
       className="group relative flex flex-col rounded-xl overflow-hidden bg-card border border-border cursor-pointer shadow-sm hover:shadow-xl hover:shadow-primary/5"
       onClick={() => onClick(movie)}
     >
