@@ -42,18 +42,18 @@ export function SearchBar() {
   return (
     <div className="relative w-full max-w-2xl mx-auto mb-16">
       <div className="relative flex items-center group">
-        <Search className="absolute left-6 w-5 h-5 text-muted-foreground group-focus-within:text-primary transition-colors" />
+        <Search className="absolute left-6 w-5 h-5 text-muted-foreground group-focus-within:text-primary transition-colors z-10" />
         <input
           type="text"
           value={query}
           onChange={(e) => handleSearch(e.target.value)}
           placeholder="Search movies by title..."
-          className="w-full h-16 pl-14 pr-14 bg-white/5 backdrop-blur-md border border-white/10 hover:border-white/20 rounded-full text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/50 transition-all shadow-2xl text-lg font-light"
+          className="w-full h-16 pl-14 pr-14 bg-white/5 backdrop-blur-md border border-white/10 hover:border-white/20 rounded-full text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/50 transition-all shadow-2xl text-lg font-light relative z-0"
         />
         {query && (
           <button
             onClick={clearSearch}
-            className="absolute right-5 text-muted-foreground hover:text-foreground transition-colors p-2 rounded-full hover:bg-white/10"
+            className="absolute right-5 text-muted-foreground hover:text-foreground transition-colors p-2 rounded-full hover:bg-white/10 z-10"
           >
             <X className="w-5 h-5" />
           </button>
