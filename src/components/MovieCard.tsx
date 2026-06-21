@@ -22,7 +22,7 @@ export function MovieCard({ movie, index = 0, onClick }: MovieCardProps) {
     show: { 
       opacity: 1, 
       y: 0,
-      transition: { duration: 0.4, ease: "easeOut", delay: index * 0.05 }
+      transition: { duration: 0.4, ease: "easeOut" as const, delay: index * 0.05 }
     }
   };
 
