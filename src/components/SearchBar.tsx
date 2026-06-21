@@ -39,14 +39,14 @@ export function SearchBar() {
 
   return (
     <div className="w-full max-w-3xl mx-auto mb-12">
-      <div className="relative flex items-end">
-        <span className="text-muted-foreground mr-4 font-bold">QUERY:</span>
+      <div className="relative flex items-baseline border-b-2 border-border pb-2 focus-within:border-primary transition-colors">
+        <span className="text-muted-foreground mr-4 font-bold uppercase tracking-widest">QUERY:</span>
         <input
           type="text"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           placeholder="[ENTER MOVIE TITLE...]"
-          className="w-full pb-2 bg-transparent border-b-2 border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-all font-mono uppercase tracking-widest"
+          className="w-full bg-transparent text-foreground placeholder:text-muted-foreground focus:outline-none font-mono uppercase tracking-widest"
         />
         {query && (
           <button

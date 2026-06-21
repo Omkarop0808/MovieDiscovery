@@ -45,7 +45,7 @@ export function MovieCard({ movie, index = 0, onClick }: MovieCardProps) {
           </div>
         )}
         
-        <div className="absolute top-2 right-2 z-10 bg-background border border-border">
+        <div className="absolute top-2 right-2 z-10">
           <FavoritesButton movie={movie} />
         </div>
       </div>
