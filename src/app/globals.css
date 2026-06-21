@@ -3,6 +3,7 @@
 @theme {
   --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
   --font-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular, monospace;
+  --font-display: var(--font-dm-serif), var(--font-geist-sans), ui-sans-serif, system-ui;
 
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -16,14 +17,14 @@
 }
 
 :root {
-  --background: #ffffff;
-  --foreground: #09090b;
+  --background: #fafafa;
+  --foreground: #050505;
   
-  --primary: #0ea5e9; /* Sky blue */
+  --primary: #e11d48; /* Cinema Red */
   --primary-foreground: #ffffff;
   
   --card: #ffffff;
-  --card-foreground: #09090b;
+  --card-foreground: #050505;
   
   --muted: #f4f4f5;
   --muted-foreground: #71717a;
@@ -32,19 +33,19 @@
 }
 
 .dark {
-  --background: #09090b;
-  --foreground: #fafafa;
+  --background: #050505; /* Deep Midnight */
+  --foreground: #f5f5f5; /* Soft Off-White */
   
-  --primary: #38bdf8; /* Lighter sky blue for dark mode */
-  --primary-foreground: #020617;
+  --primary: #f43f5e; /* Vibrant Cinema Red */
+  --primary-foreground: #000000;
   
-  --card: #18181b;
-  --card-foreground: #fafafa;
+  --card: #0a0a0a;
+  --card-foreground: #f5f5f5;
   
-  --muted: #27272a;
+  --muted: #171717;
   --muted-foreground: #a1a1aa;
   
-  --border: #3f3f46;
+  --border: #1f1f1f;
 }
 
 body {
